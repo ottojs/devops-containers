@@ -89,7 +89,7 @@ func fileDockerCompose(services []DevOpsService) {
 		"",
 		"services:",
 		"  postgresql:",
-		"    image: postgres:16.3-alpine3.20",
+		"    image: postgres:16.6-alpine3.21",
 		"    container_name: postgresql",
 		"    restart: always",
 		"    # ports:",
@@ -469,7 +469,7 @@ func writeStrings(filename string, lines []string) {
 
 func main() {
 	idx := 0
-	for _ = range Services {
+	for range Services {
 		idx++
 		Services[idx-1].ID = idx
 	}
